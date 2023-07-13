@@ -1,0 +1,6 @@
+#Soubor makefile pro program k výpoètu faktoriálu
+#pro g++
+treti5.exe: program.o funkce.o
+	g++ -o $@ $^ 
+%.o: %.cpp funkce.h
+	g++ -c $<

@@ -1,0 +1,3 @@
+Adam;ddf;comedy;1997;23;
+Stephan Gl;dr;drama;200;1235;
+DAsa;dr;comedy;200;3345;

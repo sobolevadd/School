@@ -1,0 +1,252 @@
+SEZNAM SOUBORU PODLE ADRESARU
+-----------------------------
+Adresare odpovidaji kapitolam, soubory v nich
+zhruba odpovidaji vypisum ve skriptu
+
+01: Uvodni priklady I
+ 01-01.cpp  - prvni program v C++: 
+	vytiskne pozdrav a skonci
+ 01-01st.cpp - totez pro stare prekladace, ktere jeste pozadovaly
+	hlavickove soubory z C++ s priponou .h
+ 01-02.cpp - totez co 01-1.cpp , ukazuje pouziti 
+	direktivy using
+ 01-1a.cpp - totez, navic si smaze predem obrazovku, 
+	precte cislo a vytiskne jeho druhou mocninu
+ 01-03.cpp - navic definice funkce pro vypocet faktorialu
+ 01-04.cpp - totez jako 1c, ale prehozene poradi funkce main a faktorialu 
+	(pouziti prototypu)
+ 01-05 - podadresar obsahujici predchozi program rozdeleny do tri souboru:
+	Hlavni.cpp obsahuje main(), fakt.h obsahuje prototyp funkce
+	pro vypocet faktnorialu a fakt.cpp implementaci teto funkce
+ 01-08.cpp - totez co 1, ale objektove
+ 01-09 - adresar obsahujici predchozi program rozdeleny do nekolika souboru
+	Hlavni.cpp - funkce main, napis.h - hlavickovy soubor s deklaraci
+	tridy napis, Napis.cpp - soubor s implementaci metod teto tridy
+
+02: Uvodni priklady II - Komplexni cisla
+ 02 - Adresar obsahuje priklad na pretezovani operatoru 
+	(trida cplx pro komplexni cisla, operatory pro 
+	aritmeticke operace a pro vstup a vystup)
+	projekt tvori tri soubory:
+	Hlavni.cpp - metoda main(), 
+	cplx.h - deklarace tridy cplx a operatoru << a >>,
+	cplx.cpp = implementace tridy cplx a operatoru << a >>
+
+
+03: Uvodni priklady III - Pole a ukazatele
+ 03-01.cpp - Vymena hodnot promennych (nefunguje, nebot parametry
+	se predavaji hodnotou)
+ 03-02.cpp - fungujici vymena hodnot dvou promennych, predavani ukazatelem
+ 03-04 - adresar s projektem obsahujicim jednosmerny seznam se zarazkou
+
+
+04: Uvodni priklady IV - Parametrizace, vyjimky
+ 04-01 - adresar obsahujici projekt seznamu parametrizovaneho
+	pomoci typedef (NENI TO VHODNE RESENI, MATE-LI SABLONY)
+	Typ.h - deklarace typu
+	Prvek.h - trida prvku seznamu (tentokrat nepotrebujeme soubor
+		prvek.cpp, nebot metody jsou vsechny inline)
+ 	seznam.cpp -  implementace metod seznamu
+	seznam.h - deklarace tridy seznamu
+	Hlavni.cpp - nejake pouziti (funkce main())
+ 04-02 - adresar obsahujici projekt seznamu parametrizovaneho
+	pomoci sablon
+	Prvek.h - sablona tridy prvku seznamu (tentokrat nepotrebujeme 
+		soubor prvek.cpp, nebot metody jsou vsechny inline)
+ 	seznam.h - sablona tridy seznamu a sablony vsech metod
+	(takze odpada soubor seznam.cpp)
+	Hlavni.cpp - nejake pouziti (funkce main() a funkce chyba)
+	Vsimnete si nesikovnosti osetreni chyby pomoci funkce chyba()
+ 04-03 - adresar obsahujici projekt seznamu parametrizovaneho
+	pomoci sablon, nektere metody mohou vyvolat vyjimku
+	Prvek.h - sablona tridy prvku seznamu 
+ 	seznam.h - sablona tridy seznamu a sablony vsech metod
+	Hlavni.cpp - nejake pouziti (funkce main())
+	Obsahuje pokus o vyber z parzdneho seznamu
+	
+O6: Prikazy
+ 06-01.cpp - Zastnineni promenne ve vnorenem bloku
+ 06-02.cpp - Ukazuje pouziti deklarace jako prikazu
+ 06-0A.cpp - Priklad pouziti prikazu switch (neodpovida vypisu ve skriptu)
+ 06-03.cpp - Priklad pouziti prikazu break v cyklu
+ 06-04.cpp - Priklad pouziti prikazu continue (totez
+	co predchozi priklad, jen break nahrazeno 
+	continue)
+
+08: Pole a ukazatele
+ 08-01.cpp - Schematicka ukazka pouziti funkce
+	 set_new_handler
+ 08-02.cpp - Ukazatele na funkce
+ 08-03.cpp - Ertatosthenovo sito
+ 08-0A.cpp - Funkce, ktera pocita urcity integral obdelnikovou metodou
+        integrand se predava jako parametr - ukazatel na funkci 
+	(neodpovida vypisu ve skriptu)
+ 08-0B.cpp - jednorozmerne pole, ukazky prace s nim pomoci ukazatelu
+	(neodpovida vypisu ve skriptu)
+ 08-0C.cpp - znakove retezce a prace s nimi pomoci adresove atitmetiky
+	(neodpovida vypisu ve skriptu)
+ 08-0D.cpp - adresova aritmetika pro dvourozmerne pole 
+	(neodpovida vypisu ve skriptu)
+
+09: Vyctove typy, struktury, unie
+ 09-02.cpp - Priklad pouziti unie ke zjistení zpusobu 
+	ukladani celych cisel v pameti
+
+10: Operatory, vyrazy
+ 10-01.cpp - Neprenositelnost standardnich konverzi
+ 10-02.cpp - Priklad pouziti operatoru ::
+ 10-03.cpp - Pouziti unarniho minus na unsigned
+
+11: Promenne, deklarace
+ 11-0A.cpp - priklad pouziti lokalni staticke promenne
+	(neodpovida cislovanemu vypisu ve skriptu)
+ 11-0B.cpp - Priklad ruzne viditelnosti promennych
+
+12: Funkce
+ 12-01.cpp - Funkce s vypustkou
+ 12-0A.cpp - Rozlisovani pretizenych funkci
+ 12-02.cpp - Parametry funkce main()
+ 12-03.cpp - Funkce registrovane prostrednictvim atexit()
+ 12-0C - Adresar obsahujici projekt zcasti v jazyce C,
+	zcasti v C++ (priklad spoluprace techto jazyku)
+
+13: Preprocesor
+ 13-0A.cpp - Pouziti makra assert()
+ 13-0B.cpp - Makra a pokusy s nimi
+ 13-0C.cpp - Podmineny preklad
+
+14: Objektove typy
+ 14-02.cpp - Ukazuje deklaraci metod inline
+ 14-03.cpp - definice staticke datove slozky
+ 14-04.cpp - definice vnorene tridy inline
+ 14-04A.cpp - definice vnorene tridy, ale obklopujici
+	trida obsahuje jen deklaraci, nikoli definici
+ 14-05.cpp - Pouziti kopirovaciko konstruktoru
+ 14-05A.cpp - explicitni konstruktor
+ 14-07.cpp - automaticke ukazatele
+ 14-09.cpp - Hierarchie grafickych objektu:
+	bez virtualnich metod to nefunguje
+ 14-10.cpp - Hierarchie grafickych objektu s virtualnimi 
+	metodami jiz funguje
+ 14-10A.cpp - Abstraktni metoda
+ 14-0A.cpp - Ukazatele do tridy
+
+15: Pretezovani operatoru
+ 15-00A.cpp - matice (Trida postupne budovana v probehu kapitoly)
+ 15-00B.cpp - Pretezovani ++ pro vyctovy typ dny
+ 15-00C.cpp - Pretezovani operatoru [] pro tridu bod
+ 15-00D - adresar s projektem pro pretezovani operatoru -> 
+	(automaticky ukazatel ma matici) 
+	Obsahuje soubory Hlavni.cpp - vlastni priklad
+	matice.h - hlavickovy soubor tridy s matici z 15-00A 
+	doplneny o metodu pro vypis
+	matice.cpp - implementace tridy matice
+ 15-00E.cpp - Definice konverzniho operatoru
+ 15-OOF.cpp - Globalni predefinovani new a delete
+
+16: Sablony
+ 16-00A.cpp - Sablona tridy matice
+ 16-00B.cpp - Priklad vnorene sablony
+ 16-00C.cpp - Sablony vnorenych funkci
+ 16-01.cpp - parcialni usporadani sablon volnych funkci
+ 16-01A.cpp - Vazba jmen v deklaraci sablony
+ 16-01B.cpp - Parcialni specializace sablon objektovych typu
+
+17: Vyjimky
+ 17-01 - adresar s projektem seznamu - definice vlastni tridy vyjimky
+ 17-01A - totez, pouze vyjimka bad_alloc se transformuje na jiny typ
+ 17-03.cpp - Pouziti virtualnich metod ve tridach pro vyjimky
+ 17-03A.cpp - Jako predchozi, samostatne handlery pro vsechny 
+	typy vyjimek
+ 17-03B.cpp - Vznik standardni vyjimky pri praci s retezcem
+ 17-04.c - Uvodni priklad na strukturovane vyjimky
+ 17-05.C - Koncovna a vyjimka
+ 17-05A.c - Handler pro neosetrene vyjimky
+
+18: Dynamicka identifikace typu
+ 18-01.Cpp - Operator typeid
+ 18-01A.cpp - static_cast
+ 18-01B.cpp - dynamic_cast
+ 18-01C.cpp - const_cast
+ 18-02.cpp - reinterpret_cast
+ 
+19: Prostory jmen
+ 19-01.cpp - uvodni priklad deklarace prostoru jmen
+ 19-02.cpp - Vnoreme prostory jmen
+ 19-03.cpp - Tranzitivita direktivy using
+ 19-03A.cpp - Vyhledavani operatoru v kontextu operandu
+ 19-03B.cpp - Vyhledavani operatoru v kontextu pouziti
+ 19-03C.cpp - Vyhledavani funkce v prostoru jmen parametru
+
+20: Vstupy a vystupy
+ 20-00A.cpp - pouziti proudu v podmince pri cteni
+ DATA.dta - vstupni soubor pro program z 20-00A.cpp a 20-00D.cpp
+ 20-00B.cpp - pametove proudy
+ 20-00C.cpp - pouziti manipulatoru
+ 20-00D.cpp - vyjimky vyvolavane proudem
+ 20-00E.cpp - definice vlastniho manipulatoru bez parametru
+ 20-00F.cpp - vlastni manipulator s parametrem pro Visual C++ .NET
+ 20-00G.cpp - Pouziti funkce fprintf()
+ 20-00H.c - makra pro vystup rozsirenych typu (jen C99)
+ 20-00I.cpp - Neformatovane cteni a zapis 
+ 20-00J.cpp - pouziti sscanf()
+ 20-00K.cpp - pouziti vfprintf()
+ 20-00L.c - Vystup sirokych znaku, makra pro vypis rozsirenych typu
+ 20-00M.c - Pouziti nastroju z <io.h> (nestandardni)
+
+21: Knihovny
+ 21-00A.cpp - ukazka pouziti iteratoru na kontejneru ze STL
+ 21-01.cpp - implementace filtru SORT s prepinaci -c a -n
+
+
+09: obsluha preruseni
+ !kbd.cpp - obsluha preruseni z klavesnice (9); cte z kalvesnice znaky, 
+            pocita stisknuti ESC a na 'a' skonci
+ int8.cpp - obsluha casovace (8) a klavesnice; po obrazovce bezi napis, 
+            z klavesnice se precte jiny a po stisknuti ENTER ho nahradi
+ int8a.cpp - po obrazovce bezi dva napisy, ktere se stridave posunuji -
+           - prilis nefunguje 
+ int8b.cpp - jako predchozi, ale opraveny algoritmus stridani
+
+10: prace se soubory
+ soub1.cpp - prace s binarnim souborem - vytvoreni (zapis), cteni, aktualizace
+             pomocio prostredku jazyka C (stdio.h)
+ soub2.cpp - dtto, pomoci prostredku C++ (objektove proudy)
+ soub3.cpp - prace s textovym souborem - cteni cisel, proctredky jaz. C
+ soub4.cpp - dtto, objektove proudy C++
+ data.txt - textovy soubor pro priklady 3 a 4
+
+11: deklarace objektoveho typu (trida cplx) - jen zakladni operace - konstruktor, metody
+
+12: pretezovani operatoru
+enum-o.cpp - p©etˆ‘ov n¡ oper tor– pro v˜‡tov‚ typy 
+matice.cpp - p©etˆ‘ov n¡ oper tor– pro objektov‚ typy
+
+13: seznam a iterator
+seznam.cpp - jednosmerny seznam se zarazkou, iterator na nem a funkce, 
+ktera tento seznam pomoci iteratoru utridi.
+
+14: 
+
+14: pretezovani operatoru new
+new1.cpp - pretezovani globalniho new
+new2.cpp - pretezovani new jako metody (pro jednoduche promenne a pro pole)
+
+15: sablony
+sablona seznamu a jeho iteratoru, sablona funkce pro trideni kontejneru
+a ukazka pouziti: pomoci stejne sablony vytvorime funkci pro trideni
+pole i seznamu.
+
+16: sablony - specializace a vnorene sablony
+
+17: objektove proudy - pametovy proud, neformatovane cteni a zapis, 
+vlastni manipulator s parametrem, lokalni zvyklosti a proud
+
+18: Standardni sablonova knihovna
+pouziti iteratoru, pouziti funkcnich objektu a trideni kontejneru,
+pouziti alokatoru, zjistovani informaci o datovych typech
+
+19: Vyjimky - vyvolani, blok try/catch, poslani vyjimky dal, 
+automaticky ukazatel, sablona seznamu, jehoz metody mohou vyvolat 
+vyjimky, automaticke volani delete pri vyjimce v konstruktoru 
+dynamicky alokovane instance

@@ -1,0 +1,1 @@
+void arraymax(double a[], int b);
