@@ -20,11 +20,11 @@ public class List {
             System.out.println("Empty list :(");
             return;
         }
-        Element actual = head;
-        while (actual !=tail)
+        Element tmp = head;
+        while (tmp !=tail)
         {
-            System.out.print(actual.getData() + ", ");
-            actual = actual.getNext();
+            System.out.print(tmp.getData() + ", ");
+            tmp = tmp.getNext();
         }
     }
     private Element head;
