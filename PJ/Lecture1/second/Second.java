@@ -22,6 +22,10 @@ public class Second
     }
 }
 
+
+
+
+
 /* 
 class Pomoc
 {
