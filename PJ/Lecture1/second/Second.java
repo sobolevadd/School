@@ -40,6 +40,7 @@ class Pomoc
 
 
 
-//DAEMON THREAD , GARBAGE COLLECTOR
+//DAEMON THREAD 
+//GARBAGE COLLECTOR prohledava zasobnik oznacuje co je pouzivany a co neni. princip mark and compact
 
 //muze byt vice nez jedna trida, ale nesmi byt public. jestli chci vice verejnych trid, musi kayda mit svuj soubor

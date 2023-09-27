@@ -8,6 +8,22 @@ public class Program {
         list.pushFront(5);
         list.pushFront(3.14);
         list.pushFront("Hello");
+        list.pushFront(new Numero(10));
         list.print();
+    }
+}
+
+class Numero
+{
+    private int numero;
+    public Numero(int n)
+    {
+        numero = n;
+    }
+
+    @Override       //anotace
+    public String toString ()
+    {
+        return "" + numero;
     }
 }
