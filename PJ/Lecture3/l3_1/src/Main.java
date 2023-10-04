@@ -7,8 +7,8 @@ public class Main
     {
         switch(n)
         {
-            case 0: return "Hi"; //case -> "Hi"
-            case 1: return "Good mo:>";
+            case 0: return "Hi"; //case 0 -> "Hi"
+            case 1: return "Good mo:>"; //case 1: yeald "Hi";
             case 2: return "Adiooos";
             //default:throw new Exception(" Undefined value");
             default:
