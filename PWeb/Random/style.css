@@ -1,0 +1,214 @@
+body
+{
+    font-size: 100%;
+    font-family:Georgia, 'Times New Roman', serif;
+    line-height: 1.2;
+}
+
+h1
+{
+    color: #212121;
+    font-family: 'Lato', sans-serif;
+    font-size: 3.25em;
+    font-weight: 300;
+    letter-spacing: -2px; 
+    line-height: 0.975;
+}
+
+.about h2, .mod h2, .nav-main a
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about h2, .mod h2
+{
+    font-size: 875em;
+}
+
+ul, ol
+{
+    list-style: none;
+}
+
+a
+{
+    color: #1162a4;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+img{
+    margin:0;
+}
+
+.page
+{
+    margin:0 auto;
+    width: 960px;
+}
+
+.container
+{
+    background: url(../img/bg.png) repeat-y 629px 0;
+    padding-bottom: 1.9375em;
+}
+
+main
+{
+    float: right;
+    width: 600 px;
+}
+
+.sidebar
+{
+    float: right;
+    margin-top: 1.875em;
+    width: 300px;
+}
+
+.masterhead
+{
+    padding-top: 10px;
+    position: relative;
+}
+
+.logo
+{
+    font-size: 10px;
+    line-height: 1;
+    margin-bottom: -8px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.nav-main
+{
+    border-bottom:1px solid #c7c7c7;
+    border-top: 5 px solid #019443;
+    margin-bottom: 0;
+    padding: .45em 0 .5em;
+}
+
+.nav-main li
+{
+    border-left: 1px solid #c8c8c8;
+    display: inline-block;
+    text-align: left;
+}
+
+d.nav-main li:first-child
+{
+    border-left: 0;
+}
+
+.nav-main li:last-child
+{
+    padding-right: 0;
+}
+
+.nav-main a
+{
+    color:#292929;
+    display: inline-block;
+    font-size: 1.125em;
+    padding: .5em 1.15em .5em 1.4em;
+}
+
+.nav-main a:hover
+{
+    color:#029443;
+    text-decoration: none;
+}
+
+.nav-main .current-page, .nav-main .current-page:hover
+{
+    color: #747474;
+    cursor: default;
+}
+
+.social-sites
+{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: -3px;
+    top:41px;
+}
+
+@font-face {
+    font-family: 'Social Icons';
+    src: url("font/socialico-webfont.eot");
+    src: url("font/socialico-webfont.eot?#iefix") format("embedded-opentype"), url("font/socialico-webfont.woff") format("woff"), url("font/socialico-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;}
+
+.social-sites a 
+{
+    color: #019443;
+    font-family: 'Social Icons', sans-serif;
+    font-size: 46px;
+    line-height: .8;
+    vertical-align: middle;
+}
+
+.social-sites a:hover
+{
+    color:#1162a4;
+    text-decoration: none;
+}
+
+main > .post:first-child > h1
+{
+    margin-top: 0.904em;
+}
+
+h1
+{
+    margin-bottom: .4125em;
+}
+
+.post-photo
+{
+    float: right;
+    margin-left: 2px;
+    margin-right: 22px;
+    max-width: 61.667%
+}
+
+.post-blur p
+{
+    color: #363636;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.post-footer
+{
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    padding-bottom: .7em;
+    padding-top: .7em;
+}
+
+.post-footer a
+{
+    font-weight: bold;
+}
+
+.footer p
+{
+    color: #3a3a3a;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 0.688em;
+}
+
+.footer p small
+{
+    font-size: inherit;
+}
+
