@@ -1,0 +1,16 @@
+Programm for opening some pictures of cats in google 
+and downloading 20 of this pistures.
+
+Terminal:
+Installation of requests:
+[requests] https://docs.python-requests.org/en/latest/index.html
+
+python -m venv .venv
+source .venv/bin/activate
+pip install requests
+
+Installation of duckduckgo_search:
+
+[duckduckgo_search] https://pypi.org/project/duckduckgo-search/
+
+pip install duckduckgo_search

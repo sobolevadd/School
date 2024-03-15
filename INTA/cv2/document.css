@@ -1,0 +1,42 @@
+/* Úkoly: v tomto souboru doplňte vhodné definice stylu.
+ * Soubory reset.css ani modern-reset.css neměňte.
+ */
+ main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 2em;
+  margin: 1em;
+}
+article {
+  max-width: 500px;
+  text-align: justify;
+}
+aside {
+  width: 150px;
+}
+:is(h1, h2, h3, h4, h5, h6):not(:first-child) {
+  margin-top: 1em;
+}
+:is(h1, h2, h3, h4, h5, h6):not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+/* číslování nadpisů */
+body {
+  counter-set: h2-counter;
+  counter-set: h3-counter;
+}
+h2 {
+  counter-increment: h2-counter;
+  counter-set: h3-counter;
+}
+h3 {
+  counter-increment: h3-counter;
+}
+h2::before {
+  content: counter(h2-counter) " ";
+}
+h3::before {
+  content: counter(h2-counter) "." counter(h3-counter) " ";
+}

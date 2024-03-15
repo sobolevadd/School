@@ -1,0 +1,42 @@
+data.json
+
+from pathlib import Path
+import json
+
+directory = Path("images")
+imgs = directory.iterdir()
+data = json.dumps([str(i) for i in imgs])
+with open("data.json", "w") as f:
+    print(f"data = {data}", file=f)
+
+
+gallery.js
+
+var root = document.body;
+var data = [];
+
+// komponenta pro zobrazení přehledu všech obrázků
+var Gallery = {
+    view: function() {
+        console.log("Gallery.view");
+        return m(/* ... */)
+    }
+}
+
+// komponenta pro zobrazení jednoho obrázku
+var Image = {
+    view: function() {
+        return m(/* ... */)
+    }
+}
+
+m.route(root, "/gallery", {
+    "/gallery": Gallery,
+    "/image": Image,
+})
+
+// obnovení UI po kompletním načtení dat
+window.onload = (event) => {
+    console.log("window.onload");
+    m.redraw();
+};

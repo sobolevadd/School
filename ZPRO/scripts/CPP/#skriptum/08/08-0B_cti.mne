@@ -1,0 +1,107 @@
+Priklady na pole, ukazatele a adresovou aritmetiku:
+
+3a.cpp
+Tento program obsahuje nekolik ukazek praci s poli nejen pomoci ukazatelu:
+
+int P[N], Q[N]; 
+
+je deklarace dvou poli. Kazde z nich ma N oprvku typu int, a to
+P[0], P[1], ... P[N-1]. Prvek P[N] neexistuje, pri porovnavani se 
+ale muze pouzit jeho adresa.
+
+Poznamka: konstantu N (definovanou pomoci const) lze v deklaraci poctu 
+indexu pouzit v C++, nikoli vsak v C.
+
+for(int i = 0; i < N; i++)
+  P[i] = i;
+
+Typicke zachazeni s polem v C/C++: Cyklus for pro indexy od 0 do N-1.
+
+for(int *ui = Q,
+         ui < &Q[N],
+         ui++)
+  *ui = 1;
+
+Prace s polem pomoci ukazatele; do ukazatele ui ulozime adresu prvniho prvku
+pole Q (ui = Q znamena totez co ui = &Q[0]). V podmince cyklu ji porovnavame 
+s adresou (neexistujiciho) prvku Q[N]. Operace 
+ui++
+znamena totez co ui += 1 nebo ui = ui + 1 a zpusobi, ze ukazatel ui bude 
+ukazovat na nasledujici prvek pole Q (posune se o jeden prvek dopredu).
+
+Ukazatel se v C/C++ vzdy poklada za ukazatel na prvni prvek pole, a proto 
+lze na ukazatele s domenovym typem pouzit operator indexovani (To nejde na 
+ukazatele bez domenoveho typu, void*, nebo ne ukazatele na funkce.) 
+
+Jestlize ulozime do ukazatele u adresu dynamicky alokovaneho pole prikazem
+u = new int [N];
+muzeme toto pole vyplnit hodnotami uplne stejne jako obycejne pole:
+for(i = 0; i < N; i++) u[i] = i+100;
+To mimochodem znamena, ze
+u[i] 
+je totez co
+*(u+i).
+
+Posledni priklad prepise prvky pole u v obracenem poradi:
+
+for(int *u1 = u, *u2 = u+N-1,
+    u1 < u2,
+    u1++, u2--)
+{ /* zde se prohodi prvky *u1 a *u2 */ }
+
+- V prvnin vyrazu v prikazu for muzeme deklarovat vice promennych se 
+stejnym zakladnim typem (zde jsme deklarovali u1 a u2 jako ukazatele 
+na int a priradili jsme jin adresu prvniho resp. posledniho prvku pole, 
+na nez ukazuje u).
+
+- Nejprve prohodime prvni s poslednim (ukazuji na ne u1 a u2), pak druhy 
+s predposlednim atd. To znamena, ze cyklus pobezi, dokud se ukazatele u1 
+a u2 nesetkaji.
+
+- Po prohozeni prvniho s poslednim je treba prohodit druhy s predposlednim. 
+To znamena, ze ukazatel u1 se musi posunout o prvek dopredu, ukazatel 
+u2 o prvek dozadu. Pouzijeme k tomu operace u1++ a u2--. To jsou ale dva 
+vyrazy a C++ dovoluje pouzit na miste tretiho vyrazu v prikazu for jen jeden -
+spojime je tedy operatorem carka:
+u1++, u2--
+
+Nakonec musime dynamicky alokovane pole uvolnit. Pouzijeme k tomu operator
+delete.
+
+Shrnuti adresove aritmetiky:
+
+Pro ukazatele s domenovym typem jsou definovany operace 
++:  pricteni celeho cisla, vysledek je ukazatel 
+-: odecteni celeho cisla, vysledek je ukazatel
+-:  odecteni dvou ukazatelu, vysledek je cislo
+++, --: totez co pricteni ci odecteni 1
+<, >, <=, >=, ==, !=: ukazatel a "je vetsi" nez ukazatel b, 
+ukazuje-li na vyssi adresu; osdtatni operatory jsou jasne.
+
+PRI VSECH TECHTO OPERACICH SE PREDPOKLADA, ZE JDE O UKAZATELE DO POLI
+a ze dane operace maji smysl. Pricteni 1 k ukazateli znamena posun na 
+dalsi prvek pole, pricteni nebo odecteni cisla k je posun o k prvku v poli 
+(zvyseni nebo snizeni indexu o k, nezavisle na velikosti prvku).
+Rozdil dvou ukazatelu je vlastne rozdil indexu dvou prvku pole.
+Pri poroivnani je vetsi ukazatel, ktery ukazuje na prvek s vyssim indexem.
+
+NULL nebo 0: ukazatel nikam, obdoba pascalskeho nil. Lze jej 
+pouzit pri porovnavani.
+
+Pole (zatim pouze jednorozmerna):
+
+Pole se v C/C++ skoro vzdy transformuje na ukazatel na prvni prvek (vyjimky
+si povime dale). To znamena, ze v prirazeni
+int *u = P;
+(kde P je pole z naseho prikladu) se do u ulozi adresa P[0]. Take pri 
+indexovani se toto pravidlo uplatnuje, takze operator indexovani ma vlastne 
+jako operand vzdy ukazatel. Proto P[0] znamena totez co *P, 
+P[1] totez co *(P+1).
+
+Pole se chova jako pole jen ve trech situacich:
+
+1) Pouzijeme-li na ne operator sizeof, dostaneme velikost pole, nikoli 
+   ukazatele;
+2) Pouzijeme-li na ne operator &, dostaneme adresu pole, nikoli adresu 
+   prvniho prvku (ciselne je to stejna hodnota, ale je jineho typu).
+3) Pouzijeme-li je k inicializaci reference (o tom jindy).

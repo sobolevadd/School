@@ -1,0 +1,38 @@
+Spojovani casti programu napsanych v C a v C++
+----------------------------------------------
+
+Chceme-li v programu v jazyku C++ pouzit funkci
+void F(int);
+napsanou a prelozenou v modulu v jazyku C, musime ji v C++
+deklarovat zapisem
+
+extern "C"  void F(int);
+
+Skupinu deklaraci lze uzavrit do zavorek:
+
+extern "C" {
+void F();
+int G(int);
+double sin(double);
+}
+
+Takoveto deklarace se obvykle ukladaji do hlavickovych souboru. Abychom
+mohli jeden hlavickovy soubor pouzit jak v C tak i v C++, uzavreme
+casti ' extern "C" {' a '}' nezi direktivy pro podminenou kompilaci.
+K rozliseni jazyku poslouzi makro
+__cplusplus,
+ktere je #definovano vzdy pri prekladu modulu v C++ a neni #definovano
+pri prekladu v C.
+
+Uvedeny priklad se sklada ze tri souboru:
+
+FUN.H - hlavickovy soubor s prototypem funkce F; lze jej pouzit jak v C
+		  tak i v C++
+
+FUN.C - definice funkce F v jazyce C; sem je (pro kontrolu) vlozen i
+		  hlavickovy soubor FUN.H
+
+HLAVNI.CPP - hlavni program, pouzivajici funkci F, napsany v C++
+
+Chcete-li jej spustit, definujte projekt slozenu se souboru
+FUN.C a HLAVNI.CPP

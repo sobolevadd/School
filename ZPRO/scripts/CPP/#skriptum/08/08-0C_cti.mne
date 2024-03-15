@@ -1,0 +1,42 @@
+ZNAKOVE RETEZCE
+
+Znakove retezce jsou pole znaku, v C/C11 vzdy ukoncena znaken '\0'. 
+
+Deklarace
+
+char * c = "ahoj";
+
+udela toto:
+1. Vytvori ukazatel c;
+2. Kdesi v pameti vytvori pole 5 znaku s obsahem 'a','h','o','j','\0'.
+3. Do  c ulozi adresu tohoto pole.
+
+Deklarace 
+
+char *d = c;
+
+vytvori ukazatel d a ulozido nej obsah ukazatele c. Oba tedy ukazuji na 
+stejne misto v pameti, a proto prikazem
+
+d[2] = 'j';
+
+zmenime i to, na co ukazuje c.
+
+funkce pro kopirovani retezcu:
+
+Predavame-li pole jako parametr, predava se ukazatel na prvni prvek. 
+To znamena, ze ve funkci 
+
+void kopiruj(char a[], char b[]) 
+
+jsou a, b ukazatele, i kdyz jsme je deklarovali jako pole!!
+
+prikaz
+
+while(*a++ = *b++);
+
+do *a se presune *b (presunou se znaky pole) a pak se a i b posune na 
+dalsi prvek. (Operator ++ zapsany za operand ma sice vyssi prioritu nez *,
+ale provede se az nakonec). Navic je prirazeni vyraz a ma hodnotu toho, 
+co se ulozilo do leveho operandu. To znamena, ze po preneseni zaverecne nuly
+(znaku '\0', ukoncujiciho retezec) cyklus skonci.
