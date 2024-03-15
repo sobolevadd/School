@@ -1,2 +1,0 @@
-Zakladni pravidlo dedeni:
-potomek muze zastoupit predka

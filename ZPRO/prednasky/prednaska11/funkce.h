@@ -1,1 +1,0 @@
-// int faktorial(int x);

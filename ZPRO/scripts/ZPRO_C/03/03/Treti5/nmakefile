@@ -1,8 +1,0 @@
-#Soubor makefile pro program k výpoètu faktoriálu
-#pro Visual C++
-treti5.exe: program.obj funkce.obj
-	link /out:treti5.exe funkce.obj program.obj 
-funkce.obj: funkce.cpp
-	cl -c funkce.cpp
-program.obj: program.cpp
-	cl -c program.cpp

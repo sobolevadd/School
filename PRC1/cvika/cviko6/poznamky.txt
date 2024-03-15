@@ -1,2 +1,0 @@
-Vsechny graficke objekty maji spolecnou vlastnost: barva
-Maji spolecnou operaci : print (draw)

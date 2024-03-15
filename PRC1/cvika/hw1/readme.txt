@@ -1,1 +1,0 @@
-To run file you can write "make" in terminal.
